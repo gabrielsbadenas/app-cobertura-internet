@@ -1,4 +1,23 @@
-const user={
+class User{
+	constructor(primer,ultimo,tipo,doc,provincia,calle,numero,
+		puerta,localidad,codigopostal,sub,domain,country,area,number){
+		this.nombres={primer,ultimo}
+		this.documento={tipo,numero:doc}
+		this.email={sub:sub,at:"@",domain:domain}
+		this.phone={country,area,number}
+		this.domicilio={
+			provincia:provincia,
+			calle:calle,
+			numero:numero,
+			puerta:puerta,
+			localidad:localidad,
+			codigopostal:codigopostal
+		}
+		//this.email={sub:sub,at:'@',domain:domain},
+		//this.phone={country,area,number}
+	}
+}
+const gabriel={
 	nombres: {
 		primer: 'gabriel',
 		ultimo: 'badenas'
@@ -31,5 +50,9 @@ const user={
 		number:12345678
 	}
 }
-export default {user}
+	const fer = new User('fernando','sanchez','dni',88888888,'buenos aires','25 de mayo',420,'1b','tigre',1234,'fernandosbadenas','hotmail.com','+54',11,12341234)
+const users=[
+	fer,gabriel
+]
+export default {users}
 //todo: hacerlo pero con class y Usernstructor

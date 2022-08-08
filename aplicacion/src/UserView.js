@@ -1,15 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import User from './models/User'
-function UserView(){
-return(
-  <p>a</p>
-)
-
-}
 function App() {
-  let user ={user:User.users[0]}// new User()
-  console.log(User.users)
+  let user =User// new User()
+  console.log(user.user)
   //to do: sacar uno de los user (cambiar user.user por user solo)/
   return (  
     <div className="App">
