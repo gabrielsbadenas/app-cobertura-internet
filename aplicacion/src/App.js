@@ -6,6 +6,22 @@ function Usuario(props){
  // constructor(){}
     return (<p>------------------------------{props.i}</p>)
 }
+function Ubicacion(){
+  const geolocation = navigator.geolocation
+  const options = {enableHighAccuracy:true,
+  timeout:5000,maximumAge:0}
+  let posicion = {}
+  const getPosition=(position)=>{
+    posicion = position  //console.log(position)
+  }
+  console.log(posicion.GeolocationPosition)
+
+  geolocation.getCurrentPosition(getPosition)
+  console.log(navigator.geolocation.getCurrentPosition
+    ((position)=>console.log(position.coords.latitude,
+      position.coords.longitude)))
+}
+Ubicacion()
 function UserInput(props){
   return(
     <div>
