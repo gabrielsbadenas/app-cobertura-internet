@@ -1,4 +1,4 @@
-return {
+const user={
 	nombres: {
 		primer: 'gabriel',
 		ultimo: 'badenas'
@@ -26,9 +26,10 @@ return {
 			code: '+54'
 		},
 		area: {
-			number: entero(11)
+			number: 11
 		},
-		number:entero(12345678)
+		number:12345678
 	}
 }
-//todo: hacerlo pero con class y constructor
+export default {user}
+//todo: hacerlo pero con class y Usernstructor
