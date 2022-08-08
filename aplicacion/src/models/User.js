@@ -50,7 +50,7 @@ const gabriel={
 		number:12345678
 	}
 }
-	const fer = new User('fernando','sanchez','dni',88888888,'buenos aires','25 de mayo',420,'1b','tigre',1234,'fernandosbadenas','hotmail.com','+54',11,12341234)
+	const fer = new User('fernando','sanchez','dni',88888888,'buenos aires','25 de mayo',420,'1b','tigre',1234,'fernandosbadenas','hotmail.com','54','11','12341234')
 const users=[
 	fer,gabriel
 ]
