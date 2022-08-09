@@ -43,6 +43,7 @@ function UserInput(props){
     </div>
   )
 }
+//<input type="button">guardar user</input>
 function UserView(props){
   let user ={user:User.users[props.index]}// new User()
   return (  
