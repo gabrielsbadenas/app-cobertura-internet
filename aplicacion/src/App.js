@@ -2,10 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import User from './models/User'
 let index=0
+//import Usuario from './models/SeparationBar'
 function Usuario(props){
  // constructor(){}
     return (<p>------------------------------{props.i}</p>)
 }
+//import Ubicacion from './models/Location' 
 function Ubicacion(){
   const geolocation = navigator.geolocation
   const options = {enableHighAccuracy:true,
@@ -20,8 +22,11 @@ function Ubicacion(){
   console.log(navigator.geolocation.getCurrentPosition
     ((position)=>console.log(position.coords.latitude,
       position.coords.longitude)))
+  
+  //tiene que retornar la ubicacion en lugar de hacer console.log
 }
-Ubicacion()
+const ubicacion = Ubicacion()
+//import UserInput from './models/UserInput'
 function UserInput(props){
   return(
     <div>
@@ -44,6 +49,7 @@ function UserInput(props){
   )
 }
 //<input type="button">guardar user</input>
+//import UserView from './models/UserView'
 function UserView(props){
   let user ={user:User.users[props.index]}// new User()
   return (  
