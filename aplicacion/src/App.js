@@ -62,7 +62,8 @@ function UserView(props){
       <p font="black">telefono: {''+user.user.phone.country.code+user.user.phone.area.number+user.user.phone.number}</p>
       <p>domicilio:
 {user.user.domicilio.provincia}+{user.user.domicilio.localidad}+{user.user.domicilio.codigopostal}+{user.user.domicilio.calle}+{user.user.domicilio.numero}+{user.user.domicilio.puerta}
-
+<p font='black'>coordenadas: 0 0</p>
+#todo agregar campo de coordenadas al user
       </p>
     </div>
   )
