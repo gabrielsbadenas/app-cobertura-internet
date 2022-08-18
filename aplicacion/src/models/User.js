@@ -1,6 +1,21 @@
 class User{
-	constructor(primer,ultimo,tipo,doc,provincia,calle,numero,
-		puerta,localidad,codigopostal,sub,domain,country,area,number){
+	constructor(
+		primer,
+		ultimo,
+		tipo,
+		doc,
+		provincia,
+		calle,
+		numero,
+		puerta,
+		localidad,
+		codigopostal,
+		sub,
+		domain,
+		country,
+		area,
+		number
+		){
 		this.nombres={primer,ultimo}
 		this.documento={tipo,numero:doc}
 		this.email={sub:sub,at:"@",domain:domain}
@@ -50,7 +65,19 @@ const gabriel={
 		number:12345678
 	}
 }
-	const fer = new User('fernando','sanchez','dni',88888888,'buenos aires','25 de mayo',420,'1b','tigre',1234,'fernandosbadenas','hotmail.com','54','11','12341234')
+	const fer = new User(
+		'wiki',
+		'sanchez',
+		'dni',
+		88888888,
+		'buenos aires',
+		'25 de mayo',
+		420,'1b','tigre'
+		,1234,'wiki-san'
+		,'wiki.com','54','11'
+		,'12341234'
+		)
+
 const users=[
 	fer,gabriel
 ]
