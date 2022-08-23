@@ -7,6 +7,11 @@ import { Config } from 'node-json-db/dist/lib/JsonDBConfig'
 */
 import "./App.css";
 import User from "./models/User";
+import  CheckCuadrant from './models/CheckCuadrant.js' 
+import CompareCoordinates from './models/CompareCoordinates.js'  
+import Location from './models/Location.js'  
+
+
 let index = 0;
 /*
 async function DAO(){
