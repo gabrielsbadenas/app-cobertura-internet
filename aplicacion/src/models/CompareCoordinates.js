@@ -6,8 +6,14 @@ class Coordinate {
         this.y3 = y3
     }
 }
+const jsonSquare={
+	x0:34,
+	y1:58,
+	x2:33,
+	y3:59
+}
 const barrio = new Coordinate(-34,-58,-35,-59)
-function compareCoordinates(userLocation, coverageZone) {
+export default function compareCoordinates(userLocation, coverageZone) {
 
     const a = userLocation
     const b = coverageZone

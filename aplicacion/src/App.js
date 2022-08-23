@@ -12,7 +12,7 @@ import CompareCoordinates from './models/CompareCoordinates.js'
 import Location from './models/Location.js'  
 
 CheckCuadrant(-34,-58)
-
+CompareCoordinates()
 let index = 0;
 /*
 async function DAO(){
