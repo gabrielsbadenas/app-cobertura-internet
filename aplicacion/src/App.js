@@ -11,6 +11,7 @@ import  CheckCuadrant from './models/CheckCuadrant.js'
 import CompareCoordinates from './models/CompareCoordinates.js'  
 import Location from './models/Location.js'  
 
+CheckCuadrant(-34,-58)
 
 let index = 0;
 /*

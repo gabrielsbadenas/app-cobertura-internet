@@ -11,4 +11,8 @@ let northSouth
 	}else{
 		westEast = 'west'
 	}
+	const cuadrant = northSouth+westEast
+	alert(northSouth+westEast)
+	console.log(northSouth,westEast)
+	return {northSouth,westEast}
 }
