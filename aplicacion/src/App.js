@@ -1,4 +1,6 @@
 import logo from "./logo.svg";
+//to do en lugar de guardar las coordenadas usar una funcion que use esas variables
+//y se las pase como coordenada
 /*
 import { JsonDB } from 'node-json-db';
 import { Config } from 'node-json-db/dist/lib/JsonDBConfig'
