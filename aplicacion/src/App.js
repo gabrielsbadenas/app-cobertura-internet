@@ -9,6 +9,7 @@ function Usuario(props) {
 }
 //import Ubicacion from './models/Location'
 function Ubicacion() {
+	const pos = {x:0,y:1}
   const geolocation = navigator.geolocation;
   const options = { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 };
   let posicion = {};
@@ -17,10 +18,29 @@ function Ubicacion() {
   };
   console.log(posicion.GeolocationPosition);
 
-  geolocation.getCurrentPosition(getPosition);
+  function getCurrentPosition(getPosition){
+	let glgcp = geolocation.getCurrentPosition(getPosition);
+	let nglgcp = navigator.geolocation.getCurrentPosition((position) =>
+		{
+			let coords = position.coords
+			const latitude=coords.latitude
+			const longitude=coords.longitude
+      console.log('27',position.coords.latitude, position.coords.longitude)
+			pos.x=latitude
+			pos.y=longitude
+			console.log('num31',pos)
+			return [latitude, longitude]
+		})
+		//return 'x,y'//
+	  console.log(31,glgcp,nglgcp)
+	  return [glgcp,nglgcp]
+  }
+	const getCurPos = getCurrentPosition(getPosition);
+	const gcp = geolocation.getCurrentPosition(getPosition);
+	console.log(33,gcp)
   console.log(
     navigator.geolocation.getCurrentPosition((position) =>
-      console.log(position.coords.latitude, position.coords.longitude)
+      console.log('36',position.coords.latitude, position.coords.longitude)
     )
   );
 
