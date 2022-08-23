@@ -1,7 +1,20 @@
 import logo from "./logo.svg";
+/*
+import { JsonDB } from 'node-json-db';
+import { Config } from 'node-json-db/dist/lib/JsonDBConfig'
+*/
 import "./App.css";
 import User from "./models/User";
 let index = 0;
+/*
+async function DAO(){
+	const db = new JsonDB(new Config("userDataBase",true,false,'/'))
+	await db.push('/test0','super test')
+	let getter = await db.getData("/test0")
+	console.log(getter)
+}
+DAO()
+*/
 //import Usuario from './models/SeparationBar'
 function Usuario(props) {
   // constructor(){}

@@ -1,0 +1,7 @@
+{
+  "name": "app-cobertura-internet",
+  "packageManager": "yarn@3.2.2",
+  "dependencies": {
+    "node-json-db": "^2.1.0"
+  }
+}
