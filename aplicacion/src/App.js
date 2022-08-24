@@ -10,7 +10,7 @@ import User from "./models/User";
 import  CheckCuadrant from './models/CheckCuadrant.js' 
 import CompareCoordinates from './models/CompareCoordinates.js'  
 import Location from './models/Location.js'  
-
+import UserInputClass from './models/UserInput.js'
 CheckCuadrant(-34,-58)
 //CompareCoordinates()
 let index = 0;
@@ -122,12 +122,16 @@ function UserView(props) {
     </div>
   );
 }
+function useCompareCoordinates(){
+  
+}
 function App() {
   console.log(User.users);
   //to do: sacar uno de los user (cambiar user.user por user solo)/
   return (
     <div className="App">
       <UserInput></UserInput>
+      <UserInputClass></UserInputClass>
       <UserView index="0"></UserView>
       <Usuario i="0"></Usuario>
       <UserView index="1"></UserView>

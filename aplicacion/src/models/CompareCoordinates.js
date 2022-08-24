@@ -13,7 +13,8 @@ const jsonSquare={
 	y3:59
 }
 const barrio = new Coordinate(-34,-58,-35,-59)
-export default function compareCoordinates(userLocation, coverageZone) {
+export default function compareCoordinates
+(userLocation, coverageZone) {
 
     const a = userLocation
     const b = coverageZone
