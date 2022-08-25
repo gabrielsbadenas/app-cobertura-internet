@@ -40,7 +40,7 @@ export default class UserInputClass extends react.Component {
         this.state = {
             user: {
                 nombres: {
-                    primer: 'g',
+                    primer: '',
                     ultimo: ''
                 },
                 documento: {
@@ -84,11 +84,20 @@ export default class UserInputClass extends react.Component {
         //this.setState({e})
     }
     handleSave(e) {
-        console.log(this.state.user,users)
+        console.log(this.state.user, users)
     }
     handleNombre(e) {
         console.log(e.target.value, this.state.user.nombres.primer)
         this.setState({ user: { nombres: { primer: e.target.value } } })
+    }
+    handleApellido(e) {
+        this.setState({
+            user: {
+                nombres: {
+                    ultimo: e.target.value
+                }
+            }
+        })
     }
     render() {
         return (
@@ -96,7 +105,12 @@ export default class UserInputClass extends react.Component {
                 <input type="text" placeholder="nombre"
                     onChange={this.handleNombre.bind(this)}
                     value={this.state.user.nombres.primer}></input>
-                <input type="text" placeholder="apellido"></input>
+
+                <input type="text" placeholder="apellido"
+                onChange={this.handleApellido.bind(this)}
+                value={this.state.user.nombres.ultimo}
+                ></input>
+
                 <input type="text" placeholder="tipo de documento"></input>
                 <input type="text" placeholder="numero de documento"></input>
                 <input type="text" placeholder="subdominio de email"></input>
