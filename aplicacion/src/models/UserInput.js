@@ -1,16 +1,59 @@
 import react from 'react'
-export default class UserInputClass extends react.Component{
-    constructor(props){
+import User from './User'
+const userState = {
+	nombres: {
+		primer: '',
+		ultimo: ''
+	},
+	documento: {
+		tipo: '',
+		numero: ''
+	},
+	domicilio: {
+		provincia: '',
+		calle: '',
+		numero: 1,
+		puerta: '',
+		localidad: '',
+		codigopostal: ''
+	},
+	email: {
+		sub: '',
+		at: '@',
+		domain: ''
+	},
+	phone: {
+		country: {
+			name: '',
+			code: ''
+		},
+		area: {
+			number: 1
+		},
+		number: 12345678
+	}
+}
+export default class UserInputClass extends react.Component {
+    constructor(props) {
         super(props)
-        this.state = {user:{props}}
-        this.handleSubmit = function(){
+        this.state = { user: userState,
+            props: { props } }
+        this.handleSubmit = function () {
 
         }
+    }
+    handleSubmit(e){
+        console.log(e)
+        this.setState({e})
+    }
+    handleNombre(e){
+        this.setState({e})
     }
     render() {
         return (
             <form>
-                <input type="text" placeholder="nombre"></input>
+                <input type="text" placeholder="nombre" 
+                onChange={function(e){this.handleNombre(e)}} value={this.state.user}></input>
                 <input type="text" placeholder="apellido"></input>
                 <input type="text" placeholder="tipo de documento"></input>
                 <input type="text" placeholder="numero de documento"></input>
