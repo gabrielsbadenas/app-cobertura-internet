@@ -12,7 +12,7 @@ let northSouth
 		westEast = 'west'
 	}
 	const cuadrant = northSouth+westEast
-	alert(northSouth+westEast)
+	//alert(northSouth+westEast)
 	console.log(northSouth,westEast)
 	return {northSouth,westEast}
 }
