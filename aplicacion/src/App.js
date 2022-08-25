@@ -68,28 +68,6 @@ function Ubicacion() {
   //tiene que retornar la ubicacion en lugar de hacer console.log
 }
 const ubicacion = Ubicacion();
-//import UserInput from './models/UserInput'
-function UserInput(props) {
-  return (
-    <div>
-      <input type="text" placeholder="nombre"></input>
-      <input type="text" placeholder="apellido"></input>
-      <input type="text" placeholder="tipo de documento"></input>
-      <input type="text" placeholder="numero de documento"></input>
-      <input type="text" placeholder="subdominio de email"></input>
-      <input type="text" placeholder="dominio de email"></input>
-      <input type="text" placeholder="codigo de pais (ej:+54)"></input>
-      <input type="text" placeholder="codigo de area (ej:11)"></input>
-      <input type="text" placeholder="numero de telefono"></input>
-      <input type="text" placeholder="provincia"></input>
-      <input type="text" placeholder="localidad"></input>
-      <input type="text" placeholder="codigo postal"></input>
-      <input type="text" placeholder="calle"></input>
-      <input type="text" placeholder="numero de calle"></input>
-      <input type="text" placeholder="departamento"></input>
-    </div>
-  );
-}
 //<input type="button">guardar user</input>
 //import UserView from './models/UserView'
 function UserView(props) {
@@ -130,7 +108,6 @@ function App() {
   //to do: sacar uno de los user (cambiar user.user por user solo)/
   return (
     <div className="App">
-      <UserInput></UserInput>
       <UserInputClass></UserInputClass>
       <UserView index="0"></UserView>
       <Usuario i="0"></Usuario>
