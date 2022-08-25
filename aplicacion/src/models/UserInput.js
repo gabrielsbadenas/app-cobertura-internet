@@ -2,7 +2,7 @@ import react from 'react'
 import User from './User'
 const userState = {
 	nombres: {
-		primer: '',
+		primer: 'g',
 		ultimo: ''
 	},
 	documento: {
@@ -47,13 +47,15 @@ export default class UserInputClass extends react.Component {
         this.setState({e})
     }
     handleNombre(e){
-        this.setState({e})
+        console.log(e.target.value,this.state.user.nombres.primer)
+        this.setState({user:{nombres:{primer:e.target.value}}})
     }
     render() {
         return (
             <form>
                 <input type="text" placeholder="nombre" 
-                onChange={function(e){this.handleNombre(e)}} value={this.state.user}></input>
+                onChange={this.handleNombre.bind(this)} 
+                value={this.state.user.nombres.primer}></input>
                 <input type="text" placeholder="apellido"></input>
                 <input type="text" placeholder="tipo de documento"></input>
                 <input type="text" placeholder="numero de documento"></input>
