@@ -38,7 +38,39 @@ export default class UserInputClass extends react.Component {
     constructor(props) {
         super(props)
         this.state = {
-            user: userState,
+            user: {
+                nombres: {
+                    primer: 'g',
+                    ultimo: ''
+                },
+                documento: {
+                    tipo: '',
+                    numero: ''
+                },
+                domicilio: {
+                    provincia: '',
+                    calle: '',
+                    numero: 1,
+                    puerta: '',
+                    localidad: '',
+                    codigopostal: ''
+                },
+                email: {
+                    sub: '',
+                    at: '@',
+                    domain: ''
+                },
+                phone: {
+                    country: {
+                        name: '',
+                        code: ''
+                    },
+                    area: {
+                        number: 1
+                    },
+                    number: 12345678
+                }
+            },
             props: { props }
         }
         // this.handleSubmit = function () {
@@ -52,7 +84,7 @@ export default class UserInputClass extends react.Component {
         //this.setState({e})
     }
     handleSave(e) {
-        console.log(users)
+        console.log(this.state.user,users)
     }
     handleNombre(e) {
         console.log(e.target.value, this.state.user.nombres.primer)
@@ -60,7 +92,7 @@ export default class UserInputClass extends react.Component {
     }
     render() {
         return (
-            <form>
+            <div>
                 <input type="text" placeholder="nombre"
                     onChange={this.handleNombre.bind(this)}
                     value={this.state.user.nombres.primer}></input>
@@ -78,9 +110,9 @@ export default class UserInputClass extends react.Component {
                 <input type="text" placeholder="calle"></input>
                 <input type="text" placeholder="numero de calle"></input>
                 <input type="text" placeholder="departamento"></input>
-                <button placeholder='guardar' value={this.state.user} onChange={this.handleSave.bind(this)}></button>
+                <button placeholder='guardar' value={this.state.user} onClick={this.handleSave.bind(this)}></button>
                 <input type="submit" value="submit" onChange={this.handleSubmit.bind(this)}></input>
-            </form>
+            </div>
         )
     }
 }
