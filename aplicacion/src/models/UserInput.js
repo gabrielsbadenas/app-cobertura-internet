@@ -107,6 +107,35 @@ export default class UserInputClass extends react.Component {
     handleDocumentType(e){
         this.setState({user:{documento:{tipo:e.target.value}}})
     }
+    handleDocumentNumber(e){
+        this.setState({user:{documento:{numero:e.target.value}}})
+    }
+    
+    handleAdressProvince(e){
+        this.setState({user:{domicilio:{provincia:e.target.value}}})
+    }
+    handleAdressStreet(e){
+        this.setState({user:{domicilio:{calle:e.target.value}}})
+    }
+    handleAdressNumber(e){
+        this.setState({user:{domicilio:{numero:e.target.value}}})
+    }
+    handleAdressPuerta(e){
+        this.setState({user:{domicilio:{puerta:e.target.value}}})
+    }
+    handleAdressCity(e){
+        this.setState({user:{domicilio:{localidad:e.target.value}}})
+    }
+    handleAdressPostCode(e){
+        this.setState({user:{domicilio:{codigopostal:e.target.value}}})
+    }
+
+    handleSubdomain(e){
+        this.setState({user:{email:{sub:e.target.value}}})
+    }
+    handleDomain(e){
+        this.setState({user:{email:{domain:e.target.value}}})
+    }
     render() {
         return (
             <div>
