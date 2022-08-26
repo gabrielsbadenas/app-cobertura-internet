@@ -157,28 +157,49 @@ export default class UserInputClass extends react.Component {
                 <input type="text" placeholder="nombre"
                     onChange={this.handleNombre.bind(this)}
                     value={this.state.user.nombres.primer}></input>
-
                 <input type="text" placeholder="apellido"
                     onChange={this.handleApellido.bind(this)}
                     value={this.state.user.nombres.ultimo}
                 ></input>
 
-                <input onChange={this.handleDocumentType.bind(this)}
+                <input type="text" placeholder="tipo de documento"
+                    onChange={this.handleDocumentType.bind(this)}
                     value={this.state.user.documento.tipo}
-                    type="text" placeholder="tipo de documento"></input>
+                ></input>
+                <input type="text" placeholder="numero de documento"
+                    onChange={this.handleDocumentNumber.bind(this)}
+                    value={this.state.user.documento.numero}
+                ></input>
 
-                <input type="text" placeholder="numero de documento"></input>
-                <input type="text" placeholder="subdominio de email"></input>
-                <input type="text" placeholder="dominio de email"></input>
-                <input type="text" placeholder="codigo de pais (ej:+54)"></input>
-                <input type="text" placeholder="codigo de area (ej:11)"></input>
-                <input type="text" placeholder="numero de telefono"></input>
-                <input type="text" placeholder="provincia"></input>
-                <input type="text" placeholder="localidad"></input>
-                <input type="text" placeholder="codigo postal"></input>
-                <input type="text" placeholder="calle"></input>
-                <input type="text" placeholder="numero de calle"></input>
-                <input type="text" placeholder="departamento"></input>
+                <input type="text" placeholder="subdominio de email"
+                    onChange={this.handleSubdomain.bind(this)}
+                    value={this.state.user.email.sub}
+                ></input>
+                <input type="text" placeholder="dominio de email"
+                    onChange={this.handleDomain.bind(this)}
+                    value={this.state.user.email.domain}
+                ></input>
+
+                <input type="text" placeholder="codigo de pais (ej:+54)"
+                ></input>
+                <input type="text" placeholder="codigo de area (ej:11)"
+                ></input>
+                <input type="text" placeholder="numero de telefono"
+                ></input>
+
+                <input type="text" placeholder="provincia"
+                ></input>
+                <input type="text" placeholder="localidad"
+                ></input>
+                <input type="text" placeholder="codigo postal"
+                ></input>
+                <input type="text" placeholder="calle"
+                ></input>
+                <input type="text" placeholder="numero de calle"
+                ></input>
+                <input type="text" placeholder="departamento"
+                ></input>
+                
                 <button placeholder='guardar' value={this.state.user} onClick={this.handleSave.bind(this)}></button>
                 <input type="submit" value="submit" onChange={this.handleSubmit.bind(this)}></input>
             </div>
