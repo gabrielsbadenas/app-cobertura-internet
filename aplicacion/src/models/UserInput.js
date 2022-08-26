@@ -181,6 +181,8 @@ export default class UserInputClass extends react.Component {
                 ></input>
 
                 <input type="text" placeholder="codigo de pais (ej:+54)"
+                    onChange={this.handlePhoneCountryCode.bind(this)}
+                    value={this.state.user.phone.country.code}
                 ></input>
                 <input type="text" placeholder="codigo de area (ej:11)"
                 ></input>
@@ -199,7 +201,7 @@ export default class UserInputClass extends react.Component {
                 ></input>
                 <input type="text" placeholder="departamento"
                 ></input>
-                
+
                 <button placeholder='guardar' value={this.state.user} onClick={this.handleSave.bind(this)}></button>
                 <input type="submit" value="submit" onChange={this.handleSubmit.bind(this)}></input>
             </div>
