@@ -71,6 +71,7 @@ export default class UserInputClass extends react.Component {
                     number: 12345678
                 }
             },
+            list:[],
             props: { props }
         }
         // this.handleSubmit = function () {
@@ -84,7 +85,11 @@ export default class UserInputClass extends react.Component {
         //this.setState({e})
     }
     handleSave(e) {
-        console.log(this.state.user, users)
+        let alist = this.state.list
+        alist.push(this.state.user)
+        this.setState({list:alist})
+        console.log(this.state.list)
+        //console.log(this.state.user, users)
     }
     handleNombre(e) {
         console.log(e.target.value, this.state.user.nombres.primer)
