@@ -104,6 +104,9 @@ export default class UserInputClass extends react.Component {
             }
         })
     }
+    handleDocumentType(e){
+        this.setState({user:{documento:{tipo:e.target.value}}})
+    }
     render() {
         return (
             <div>
@@ -116,7 +119,10 @@ export default class UserInputClass extends react.Component {
                 value={this.state.user.nombres.ultimo}
                 ></input>
 
-                <input type="text" placeholder="tipo de documento"></input>
+                <input onChange={this.handleDocumentType.bind(this)}
+                value={this.state.user.documento.tipo}
+                type="text" placeholder="tipo de documento"></input>
+
                 <input type="text" placeholder="numero de documento"></input>
                 <input type="text" placeholder="subdominio de email"></input>
                 <input type="text" placeholder="dominio de email"></input>
