@@ -71,7 +71,7 @@ export default class UserInputClass extends react.Component {
                     number: 12345678
                 }
             },
-            list:[],
+            list: [],
             props: { props }
         }
         // this.handleSubmit = function () {
@@ -87,7 +87,7 @@ export default class UserInputClass extends react.Component {
     handleSave(e) {
         let alist = this.state.list
         alist.push(this.state.user)
-        this.setState({list:alist})
+        this.setState({ list: alist })
         console.log(this.state.list)
         //console.log(this.state.user, users)
     }
@@ -104,38 +104,53 @@ export default class UserInputClass extends react.Component {
             }
         })
     }
-    handleDocumentType(e){
-        this.setState({user:{documento:{tipo:e.target.value}}})
+    handleDocumentType(e) {
+        this.setState({ user: { documento: { tipo: e.target.value } } })
     }
-    handleDocumentNumber(e){
-        this.setState({user:{documento:{numero:e.target.value}}})
-    }
-    
-    handleAdressProvince(e){
-        this.setState({user:{domicilio:{provincia:e.target.value}}})
-    }
-    handleAdressStreet(e){
-        this.setState({user:{domicilio:{calle:e.target.value}}})
-    }
-    handleAdressNumber(e){
-        this.setState({user:{domicilio:{numero:e.target.value}}})
-    }
-    handleAdressPuerta(e){
-        this.setState({user:{domicilio:{puerta:e.target.value}}})
-    }
-    handleAdressCity(e){
-        this.setState({user:{domicilio:{localidad:e.target.value}}})
-    }
-    handleAdressPostCode(e){
-        this.setState({user:{domicilio:{codigopostal:e.target.value}}})
+    handleDocumentNumber(e) {
+        this.setState({ user: { documento: { numero: e.target.value } } })
     }
 
-    handleSubdomain(e){
-        this.setState({user:{email:{sub:e.target.value}}})
+    handleAdressProvince(e) {
+        this.setState({ user: { domicilio: { provincia: e.target.value } } })
     }
-    handleDomain(e){
-        this.setState({user:{email:{domain:e.target.value}}})
+    handleAdressStreet(e) {
+        this.setState({ user: { domicilio: { calle: e.target.value } } })
     }
+    handleAdressNumber(e) {
+        this.setState({ user: { domicilio: { numero: e.target.value } } })
+    }
+    handleAdressPuerta(e) {
+        this.setState({ user: { domicilio: { puerta: e.target.value } } })
+    }
+    handleAdressCity(e) {
+        this.setState({ user: { domicilio: { localidad: e.target.value } } })
+    }
+    handleAdressPostCode(e) {
+        this.setState({ user: { domicilio: { codigopostal: e.target.value } } })
+    }
+
+    handleSubdomain(e) {
+        this.setState({ user: { email: { sub: e.target.value } } })
+    }
+    handleDomain(e) {
+        this.setState({ user: { email: { domain: e.target.value } } })
+    }
+
+
+    handlePhoneCountryName(e) {
+        this.setState({ user: { phone: { country: { name: e.target.value } } } })
+    }
+    handlePhoneCountryCode(e) {
+        this.setState({ user: { phone: { country: { code: e.target.value } } } })
+    }
+    handlePhoneAreaNumber(e) {
+        this.setState({ user: { phone: { area: { number: e.target.value } } } })
+    }
+    handlePhoneNumber(e) {
+        this.setState({ user: { phone: { number: e.target.value } } })
+    }
+
     render() {
         return (
             <div>
@@ -144,13 +159,13 @@ export default class UserInputClass extends react.Component {
                     value={this.state.user.nombres.primer}></input>
 
                 <input type="text" placeholder="apellido"
-                onChange={this.handleApellido.bind(this)}
-                value={this.state.user.nombres.ultimo}
+                    onChange={this.handleApellido.bind(this)}
+                    value={this.state.user.nombres.ultimo}
                 ></input>
 
                 <input onChange={this.handleDocumentType.bind(this)}
-                value={this.state.user.documento.tipo}
-                type="text" placeholder="tipo de documento"></input>
+                    value={this.state.user.documento.tipo}
+                    type="text" placeholder="tipo de documento"></input>
 
                 <input type="text" placeholder="numero de documento"></input>
                 <input type="text" placeholder="subdominio de email"></input>
