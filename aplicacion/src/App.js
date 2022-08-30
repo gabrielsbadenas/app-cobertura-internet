@@ -7,6 +7,7 @@ import { Config } from 'node-json-db/dist/lib/JsonDBConfig'
 */
 import "./App.css";
 import User from "./models/User";
+import UserForm from "./models/UserForm";
 import  CheckCuadrant from './models/CheckCuadrant.js' 
 import CompareCoordinates from './models/CompareCoordinates.js'  
 import Location from './models/Location.js'  
@@ -108,6 +109,7 @@ function App() {
   //to do: sacar uno de los user (cambiar user.user por user solo)/
   return (
     <div className="App">
+      <UserForm index='0'></UserForm>
       <UserView index="0"></UserView>
       <Usuario i="0"></Usuario>
       <UserView index="1"></UserView>
