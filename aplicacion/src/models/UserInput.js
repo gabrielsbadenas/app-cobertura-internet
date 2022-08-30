@@ -185,43 +185,43 @@ export default class UserInputClass extends react.Component {
                     value={this.state.user.phone.country.code}
                 ></input>
                 <input type="text" placeholder="codigo de area (ej:11)"
-                onChange={this.handlePhoneAreaNumber .bind(this)}
-                value={this.state.user.area.number }
+                    onChange={this.handlePhoneAreaNumber.bind(this)}
+                    value={this.state.user.area.number}
                 ></input>
                 <input type="text" placeholder="numero de telefono"
-                onChange={this.handlePhoneNumber .bind(this)}
-                value={this.state.user.phone.number }
+                    onChange={this.handlePhoneNumber.bind(this)}
+                    value={this.state.user.phone.number}
                 ></input>
 
                 <input type="text" placeholder="provincia"
-                onChange={this.handleAdressProvince .bind(this)}
-                value={this.state.user.domicilio.provincia }
+                    onChange={this.handleAdressProvince.bind(this)}
+                    value={this.state.user.domicilio.provincia}
                 ></input>
                 <input type="text" placeholder="localidad"
-                onChange={this.handleAdressCity .bind(this)}
-                value={this.state.user.domicilio.localidad }
+                    onChange={this.handleAdressCity.bind(this)}
+                    value={this.state.user.domicilio.localidad}
                 ></input>
                 <input type="text" placeholder="codigo postal"
-                onChange={this.handleAdressPostCode .bind(this)}
-                value={this.state.user.domicilio.codigopostal }
+                    onChange={this.handleAdressPostCode.bind(this)}
+                    value={this.state.user.domicilio.codigopostal}
                 ></input>
                 <input type="text" placeholder="calle"
-                onChange={this.handleAdressStreet .bind(this)}
-                value={this.state.user.domicilio.calle }
+                    onChange={this.handleAdressStreet.bind(this)}
+                    value={this.state.user.domicilio.calle}
                 ></input>
                 <input type="text" placeholder="numero de calle"
-                onChange={this.handleAdressNumber .bind(this)}
-                value={this.state.user.domicilio.numero }
+                    onChange={this.handleAdressNumber.bind(this)}
+                    value={this.state.user.domicilio.numero}
                 ></input>
                 <input type="text" placeholder="departamento"
-                onChange={this.handleAdressPuerta .bind(this)}
-                value={this.state.user.domicilio.puerta }
+                    onChange={this.handleAdressPuerta.bind(this)}
+                    value={this.state.user.domicilio.puerta}
                 ></input>
 
                 <button placeholder='guardar' value={this.state.user}
-                 onClick={this.handleSave.bind(this)}></button>
-                <input type="submit" value="submit" 
-                onChange={this.handleSubmit.bind(this)}></input>
+                    onClick={this.handleSave.bind(this)}></button>
+                <input type="submit" value="submit"
+                    onChange={this.handleSubmit.bind(this)}></input>
             </div>
         )
     }
