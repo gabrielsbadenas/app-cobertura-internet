@@ -108,7 +108,6 @@ function App() {
   //to do: sacar uno de los user (cambiar user.user por user solo)/
   return (
     <div className="App">
-      <UserInputClass></UserInputClass>
       <UserView index="0"></UserView>
       <Usuario i="0"></Usuario>
       <UserView index="1"></UserView>
