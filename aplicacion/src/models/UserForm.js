@@ -32,7 +32,7 @@ class UserForm extends React.Component {
     render() {
         console.log('userform12', this.state)
         return (
-            <p>hola{ }mundo</p>
+            <p>hola { 'x:'+Math.sqrt(160*144)}{' y:'+Math.sqrt(180)} mundo</p>
         )
     }
 }
