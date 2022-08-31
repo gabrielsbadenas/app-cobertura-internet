@@ -10,6 +10,23 @@ class UserForm extends React.Component {
                 '', '', '', '', '',
                 '', '', '', '', '')
         }
+        this.list = [
+            "nombre",
+            "apellido",
+            "tipo de documento",
+            "numero de documento",
+            "subdominio de email",
+            "dominio de email",
+            "codigo de pais (ej:+54)",
+            "codigo de area (ej:11)",
+            "numero de telefono",
+            "provincia",
+            "localidad",
+            "codigo postal",
+            "calle",
+            "numero de calle",
+            "departamento"
+        ]
     }
     handle1() { }
     handle2() { }
