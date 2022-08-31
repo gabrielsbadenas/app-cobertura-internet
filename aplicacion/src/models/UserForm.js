@@ -1,6 +1,24 @@
 import React from "react";
 import UserTable from "./UserTable";
-
+/*
+USER TABLE PROPS
+this.state.table.user.
+        primer,
+        ultimo,
+        tipo,
+        doc,
+        provincia,
+        calle,
+        numero,
+        puerta,
+        localidad,
+        codigopostal,
+        sub,
+        domain,
+        country,
+        area,
+        number
+*/
 class UserForm extends React.Component {
     constructor(props) {
         super(props)
