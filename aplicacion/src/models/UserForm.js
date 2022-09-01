@@ -75,12 +75,16 @@ class UserForm extends React.Component {
 	this.setState(prevState)
     }
     handle0(e){
+	console.log(78,this.state.table.user)
+	//this.state.table.user
+	    //*
 	let thisState =this.state
-	let user = thisState.state.table.user
+	let user = thisState.table.user
 	let prop = user['primer']
 	let newProp = e.target.value
 	thisState.table.user['primer']=newProp
 	this.setState(thisState)
+	//*/
     }
     handle1() { }
     handle2() { }
@@ -107,6 +111,13 @@ class UserForm extends React.Component {
                 <h1>
                     coordenadas actuales
                 </h1>
+		<div>
+			<input
+type="text" placeholder={this.list[0]}
+onChange={this.handle0.bind(this)}
+value={this.state.table.user.primer}
+		></input>
+		</div>
                 <p>
                     hola {'x:' + Math.sqrt(160 * 144)}
                     {' y:' + Math.sqrt(180)} mundo
