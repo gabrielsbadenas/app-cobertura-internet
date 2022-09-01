@@ -50,7 +50,13 @@ class UserForm extends React.Component {
        handlePhoneNumber(e) {
         this.setState({ user: { phone: { number: e.target.value } } })
     }
-    */
+    */handler(e,child){
+        const prevState = this.state
+        const user = prevState.table.user
+        const prop = user[child]
+        const newProp = e.target.value
+        prevState.table.user[child]
+    }
     handle0(e){
 	let thisState =this.state
 	let user = thisState.state.table.user
