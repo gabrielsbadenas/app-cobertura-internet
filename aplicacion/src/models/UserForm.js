@@ -71,7 +71,8 @@ class UserForm extends React.Component {
         const user = prevState.table.user
         const prop = user[child]
         const newProp = e.target.value
-        prevState.table.user[child]
+        prevState.table.user[child]=newProp
+	this.setState(prevState)
     }
     handle0(e){
 	let thisState =this.state
