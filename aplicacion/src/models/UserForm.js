@@ -51,6 +51,14 @@ class UserForm extends React.Component {
         this.setState({ user: { phone: { number: e.target.value } } })
     }
     */
+    handle0(e){
+	let thisState =this.state
+	let user = thisState.state.table.user
+	let prop = user['primer']
+	let newProp = e.target.value
+	thisState.table.user['primer']=newProp
+	this.setState(thisState)
+    }
     handle1() { }
     handle2() { }
     handle3() { }
