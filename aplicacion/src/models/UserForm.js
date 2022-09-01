@@ -46,6 +46,11 @@ class UserForm extends React.Component {
             "departamento"
         ]
     }
+    /*
+       handlePhoneNumber(e) {
+        this.setState({ user: { phone: { number: e.target.value } } })
+    }
+    */
     handle1() { }
     handle2() { }
     handle3() { }
