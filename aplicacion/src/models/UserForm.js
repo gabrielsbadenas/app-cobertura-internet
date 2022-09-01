@@ -18,6 +18,22 @@ this.state.table.user.
         country,
         area,
         number
+        
+        'primer',
+        'ultimo',
+        'tipo',
+        'doc',
+        'provincia',
+        'calle',
+        'numero',
+        'puerta',
+        'localidad',
+        'codigopostal',
+        'sub',
+        'domain',
+        'country',
+        'area',
+        'number'
 */
 class UserForm extends React.Component {
     constructor(props) {
